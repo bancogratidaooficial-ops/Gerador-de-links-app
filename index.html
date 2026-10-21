@@ -56,5 +56,9 @@ function remover(i){filmes.splice(i,1);localStorage.setItem('gratiflix_martelo',
 function copiar(){let a=document.getElementById('saida');a.select();document.execCommand('copy');alert('COPIADO!');}
 function preencher5(){filmes=[{"t":"Titanic - O Retorno de Jack","tag":"LANCAMENTO","img":"https://img.youtube.com/vi/5yzAq4W2y1A/hqdefault.jpg","vid":"5yzAq4W2y1A"},{"t":"Superman - Entre Eras","tag":"LANCAMENTO","img":"https://img.youtube.com/vi/KymrMQKEZ2I/hqdefault.jpg","vid":"KymrMQKEZ2I"},{"t":"Minions","tag":"DESENHO","img":"https://img.youtube.com/vi/_Ajqzp5iIQ/hqdefault.jpg","vid":"_Ajqzp5iIQ"},{"t":"Vingadores - Ultimato","tag":"ACAO","img":"https://img.youtube.com/vi/spJoZReeIeQ/hqdefault.jpg","vid":"spJoZReeIeQ"},{"t":"Homem Aranha - Um Novo Dia","tag":"ACAO","img":"https://img.youtube.com/vi/PlulyWs1kS4/hqdefault.jpg","vid":"PlulyWs1kS4"}].concat(filmes);localStorage.setItem('gratiflix_martelo',JSON.stringify(filmes));render();}
 </script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('./sw.js');
+}
+</script>
 </body>
 </html>
